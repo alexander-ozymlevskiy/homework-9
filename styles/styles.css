@@ -11,60 +11,73 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-between;
-  position: relative;
   background-color: #c4c4c4bf;
   height: 70px;
   margin-bottom: 64px;
 }
 
-.wrap-img-logo {
+.block {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1025px;
+  align-items: center;
+}
+
+.wrap-logo {
   width: 90px;
   height: 55px;
-  margin-left: 217px;
-  padding-top: 8px;
+}
+
+.wrap-logo img {
+  width: 100%;
+}
+
+.form {
+  position: relative;
+  width: 295px;
+  height: 45px;
 }
 
 .search {
-  font-family: "Open Sans", sans-serif;
-  width: 295px;
-  height: 45px;
   border-style: none;
-  margin-top: 12px;
-  margin-right: 225px;
+  width: 100%;
+  height: 100%;
   padding: 0 40px;
   font-size: 14px;
   line-height: 1.5;
 }
 
-.search-icn {
+.search-icon {
   position: absolute;
   fill: none;
   width: 20px;
   height: 20px;
-  left: 958px;
-  top: 25px;
+  left: 9px;
+  top: 50%;
+  margin-top: -10px;
 }
 
 input::placeholder {
+  font-family: "Open Sans", sans-serif;
   color: #616161;
 }
 
-.container {
+.wrap-products {
   margin: 0 auto;
-  width: 1025px;
   display: flex;
   flex-wrap: wrap;
+  width: 1025px;
 }
 
-.product {
-  background-color: #fff;
-  min-height: 446px;
-  margin-bottom: 47px;
+.wrap-img {
   cursor: pointer;
+  position: relative;
+  width: 295px;
+  height: 301px;
 }
 
-.discount-icn {
+.discount-icon {
   position: absolute;
   width: 50px;
   height: 48px;
@@ -78,7 +91,7 @@ input::placeholder {
   color: #fff;
 }
 
-.new-icn {
+.new-icon {
   position: absolute;
   width: 48px;
   height: 48px;
@@ -92,8 +105,8 @@ input::placeholder {
   color: #fff;
 }
 
-.favorites-icn {
-  display: block;
+.wrap-img.favorites::after {
+  content: "";
   position: absolute;
   width: 48px;
   height: 48px;
@@ -122,43 +135,43 @@ input::placeholder {
 .wrap-img img {
   display: block;
   width: 100%;
-  margin-bottom: 16px;
 }
 
-.wrap-img:hover .product-info {
-  opacity: 1;
+.product {
+  margin-bottom: 47px;
+  cursor: pointer;
 }
 
-.wrap-img:hover img {
-  opacity: 50%;
-}
-
-.wrap-img:hover {
+.product:hover .wrap-img:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background: rgba(120, 94, 73, 0.55);
 }
 
 .product-info {
-  min-height: 129px;
-}
-
-.product-info p {
-  margin-bottom: 8px;
-  margin-left: 16px;
+  padding: 16px 30px 30px 16px;
+  background-color: #f4f5f7;
 }
 
 .product-name {
   font-weight: 600;
   font-size: 24px;
   line-height: 1.2;
+  margin-bottom: 8px;
 }
 
 .product-description {
   color: #898989;
   font-size: 16px;
   line-height: 1.5;
+  margin-bottom: 8px;
 }
 
 .product-price {
+  display: flex;
+  align-items: center;
   font-weight: 600;
   font-size: 20px;
   line-height: 1.5;
@@ -174,27 +187,35 @@ input::placeholder {
 }
 
 .footer {
-  position: relative;
   margin-top: 115px;
   height: 70px;
   background-color: #c4c4c4bf;
-  padding-left: 217px;
-  padding-top: 25px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1025px;
 }
 
 .footer ul {
   display: flex;
   list-style-type: none;
-  gap: 25px;
 }
 
-.footer ul li {
+.nav-list {
   font-weight: 600;
   font-size: 18px;
   line-height: 1.2;
+  margin-top: 24px;
 }
 
-.footer ul li a {
+.nav-list li:not(:last-child) {
+  margin-right: 25px;
+}
+
+.nav-list ul li a {
   color: #3a3a3a;
   text-decoration: none;
 }
@@ -204,47 +225,51 @@ input::placeholder {
   transition: color 0.66s;
 }
 
-.instagram-icn {
-  position: absolute;
+.icons li:not(:last-child) {
+  margin-right: 11px;
+}
+
+.icons li {
+  display: flex;
+  align-items: center;
+  margin-top: 11px;
+}
+
+.instagram-icon {
   fill: none;
   width: 47px;
   height: 47px;
-  top: 12px;
-  right: 305px;
+  transition: 0.4s ease-in-out;
 }
 
-.instagram-icn:hover {
-  background-color: #1fa2e1;
-  border-radius: 35%;
+.instagram-icon:hover {
+  box-shadow: 0 0 10px #3b5998;
+  transform: rotate(360deg);
   cursor: pointer;
 }
 
-.telegram-icn {
-  position: absolute;
+.telegram-icon {
   fill: none;
   width: 37px;
   height: 37px;
-  top: 16px;
-  right: 257px;
+  transition: 0.4s ease-in-out;
 }
 
-.telegram-icn:hover {
-  background-color: #1fa2e1;
-  border-radius: 50%;
+.telegram-icon:hover {
+  box-shadow: 0 0 10px #3b5998;
+  transform: rotate(360deg);
   cursor: pointer;
 }
 
-.linkedin-icn {
-  position: absolute;
+.linkedin-icon {
   fill: none;
   width: 47px;
   height: 47px;
-  top: 12px;
-  right: 199px;
+  transition: 0.4s ease-in-out;
 }
 
-.linkedin-icn:hover {
-  background-color: #1fa2e1;
-  border-radius: 35%;
+.linkedin-icon:hover {
+  box-shadow: 0 0 10px #3b5998;
+  transform: rotate(360deg);
   cursor: pointer;
 }

@@ -15,27 +15,31 @@
   </head>
   <body>
     <header class="header">
-      <div class="wrap-img-logo">
-        <img src="img/logo.svg" alt="" />
+      <div class="block">
+        <div class="wrap-logo">
+          <img src="img/logo.svg" alt="" />
+        </div>
+        <div class="form">
+          <svg class="search-icon">
+            <use xlink:href="img/icons/sprite.svg#search-icn"></use>
+          </svg>
+          <input
+            type="search"
+            class="search"
+            placeholder="Search for minimalist chair"
+          />
+        </div>
       </div>
-      <svg class="search-icn">
-        <use xlink:href="img/icons/sprite.svg#search-icn"></use>
-      </svg>
-      <form action="">
-        <input
-          type="search"
-          class="search"
-          placeholder="Search for minimalist chair"
-        />
-      </form>
     </header>
-    <main class="container">
-      <div class="product">
-        <div class="wrap-img">
-          <img src="img/Products/Lolito.svg" alt="" />
-          <span class="discount-icn">-50%</span>
+    <main>
+      <div class="wrap-products">
+        <div class="product">
+          <div class="wrap-img">
+            <img src="img/Products/Lolito.png" alt="" />
+            <span class="discount-icon">-50%</span>
+          </div>
           <div class="product-info">
-            <p class="product-name">Lolito</p>
+            <h2 class="product-name">Lolito</h2>
             <p class="product-description">Luxury big sofa</p>
             <p class="product-price">
               Rp 7.000.000
@@ -43,23 +47,23 @@
             </p>
           </div>
         </div>
-      </div>
-      <div class="product">
-        <div class="wrap-img">
-          <img src="img/Products/Respira.svg" alt="" />
-          <span class="new-icn">New</span>
+        <div class="product">
+          <div class="wrap-img">
+            <img src="img/Products/Respira.png" alt="" />
+            <span class="new-icon">New</span>
+          </div>
           <div class="product-info">
-            <p class="product-name">Respira</p>
+            <h2 class="product-name">Respira</h2>
             <p class="product-description">Minimalist fan</p>
             <p class="product-price">Rp 500.000</p>
           </div>
         </div>
-      </div>
-      <div class="product">
-        <div class="wrap-img">
-          <img src="img/Products/Pingky.svg" alt="" />
+        <div class="product">
+          <div class="wrap-img">
+            <img src="img/Products/Pingky.png" alt="" />
+          </div>
           <div class="product-info">
-            <p class="product-name">Pingky</p>
+            <h2 class="product-name">Pingky</h2>
             <p class="product-description">Cute bed set</p>
             <p class="product-price">
               Rp 7.000.000
@@ -67,24 +71,23 @@
             </p>
           </div>
         </div>
-      </div>
-      <div class="product">
-        <div class="wrap-img">
-          <img src="img/Products/Respira.svg" alt="" />
-          <span class="favorites-icn"></span>
+        <div class="product">
+          <div class="wrap-img favorites">
+            <img src="img/Products/Respira.png" alt="" />
+          </div>
           <div class="product-info">
-            <p class="product-name">Respira</p>
+            <h2 class="product-name">Respira</h2>
             <p class="product-description">Minimalist fan</p>
             <p class="product-price">Rp 500.000</p>
           </div>
         </div>
-      </div>
-      <div class="product">
-        <div class="wrap-img">
-          <img src="img/Products/Lolito-2.svg" alt="" />
-          <span class="new-icn">New</span>
+        <div class="product">
+          <div class="wrap-img">
+            <img src="img/Products/Lolito-2.png" alt="" />
+            <span class="new-icon">New</span>
+          </div>
           <div class="product-info">
-            <p class="product-name">Lolito</p>
+            <h2 class="product-name">Lolito</h2>
             <p class="product-description">Luxury big sofa</p>
             <p class="product-price">
               Rp 7.000.000
@@ -95,21 +98,35 @@
       </div>
     </main>
     <footer class="footer">
-      <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT US</a></li>
-        <li><a href="#">PRODUCTS</a></li>
-        <li><a href="#">CONTACTS</a></li>
-      </ul>
-      <svg class="instagram-icn">
-        <use xlink:href="img/icons/sprite.svg#instagram-icn"></use>
-      </svg>
-      <svg class="telegram-icn">
-        <use xlink:href="img/icons/sprite.svg#telegram-icn"></use>
-      </svg>
-      <svg class="linkedin-icn">
-        <use xlink:href="img/icons/sprite.svg#linkedin-icn"></use>
-      </svg>
+      <div class="container">
+        <div class="nav-list">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">PRODUCTS</a></li>
+            <li><a href="#">CONTACTS</a></li>
+          </ul>
+        </div>
+        <div class="icons">
+          <ul>
+            <li>
+              <svg class="instagram-icon">
+                <use xlink:href="img/icons/sprite.svg#instagram-icn"></use>
+              </svg>
+            </li>
+            <li>
+              <svg class="telegram-icon">
+                <use xlink:href="img/icons/sprite.svg#telegram-icn"></use>
+              </svg>
+            </li>
+            <li>
+              <svg class="linkedin-icon">
+                <use xlink:href="img/icons/sprite.svg#linkedin-icn"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
